@@ -10,6 +10,12 @@ window.numberboard = [11, 55, 88, 44, 33, 11, 77, 99, 33, 55, 77, 22, 22, 44, 99
 window.node = document.getElementsByClassName("cell");
 window.nodes = [...window.node];
 
+function resetBoard(){
+    for (var i = 0; i < nodes.length; i++){
+        window.nodes[i].setAttribute("style", " background-image: none ");  
+    }  
+}
+
 function startGame(){
     window.board = shuffle(window.board);
     window.numberboard = shuffle(window.numberboard);
@@ -18,6 +24,7 @@ function startGame(){
     var i;
     //b = document.getElementsByTagName("button")[0];
     //b.disabled = true;
+    resetBoard();
     for (i = 0; i < len; i++){
         window.nodes[i].index = i;
         window.nodes[i].addEventListener("click", displayEvt, false);
