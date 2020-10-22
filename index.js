@@ -16,8 +16,8 @@ function startGame(){
 
     let len = nodes.length;
     var i;
-    b = document.getElementsByTagName("button")[0];
-    b.disabled = true;
+    //b = document.getElementsByTagName("button")[0];
+    //b.disabled = true;
     for (i = 0; i < len; i++){
         window.nodes[i].index = i;
         window.nodes[i].addEventListener("click", displayEvt, false);
